@@ -62,7 +62,7 @@ if True:
         if 'test6' not in path:
             continue
         print("path", path)
-        lane_data.reset()
+        LANE_DATA.reset()
         img = mpimg.imread(path)
         # Un-distort the image
         undist = cv2.undistort(img, mtx, dist, None, mtx)
@@ -75,7 +75,7 @@ if True:
         # Do sliding window search
         left_y, left_x, right_y, right_x = do_sliding_window(bin_warped, img_to_draw)
         # Overlay the original image with augmentation
-        lane_drawn = get_augment_overlay(bin_warped, lane_data.left_fit_coef, lane_data.right_fit_coef, left_y, left_x,
+        lane_drawn = get_augment_overlay(bin_warped, LANE_DATA.left_fit_coef, LANE_DATA.right_fit_coef, left_y, left_x,
                                          right_y, right_x)
         augmented_undist = cv2.addWeighted(undist, 1, lane_drawn, 1, 0)
 

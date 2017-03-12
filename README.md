@@ -10,11 +10,13 @@
 [image6]: ./output_images/fit_lines.png
 [image7]: ./output_images/augmented_image.png
 
-###Project Strcture
-* `lane_finder.py` contains all essential code to generate the images and video  
-* `utils.py` contains basic utility functions
-* `test_code.py` contains code to troubleshoot/experiment the system
-* `README.md` summarizes the steps and the results
+###Project Structure
+* `lane_finder.py` script containing procedures to generate processed images and video  
+* `image_operation.py` module containing all essential code to process images and video  
+* `LaneDataStore.py` class containing data to be shared between frames in video  
+* `utils.py` module containing basic utility functions
+* `test_code.py` scripts containing code to troubleshoot/experiment the system
+* `README.md` summary detailing the steps and the results
 
 ###Camera Calibration
 #####Goal
